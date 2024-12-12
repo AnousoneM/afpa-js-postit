@@ -15,33 +15,34 @@
     <nav class="navbar fixed-top">
         <div class="container-fluid">
 
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">
-                <i class="bi bi-plus"></i>
+                <i class="bi bi-plus fw-bold fs-4"></i>
             </button>
 
             <div class="offcanvas offcanvas-start bg-primary text-light" tabindex="-1" id="offcanvasDarkNavbar"
                 aria-labelledby="offcanvasDarkNavbarLabel">
 
-                <div class="offcanvas-header border">
+                <div class="offcanvas-header">
 
-                    <p class="offcanvas-title h3" id="offcanvasDarkNavbarLabel">Post it! Afpa - 2024</p>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
 
                 <div class="offcanvas-body">
 
-                    <div class="row border border-light p-3 justify-content-center">
+                    <div class="row px-3 justify-content-center">
 
-                        <label class="d-block" for="">Titre</label>
-                        <input type="text" class="col-10" placeholder="Course">
+                        <label class="d-block fs-4" for="titre">Titre</label>
+                        <input type="text" class="col-10 mt-1 mb-3" placeholder="Courses" name="titre" id="titre">
 
-                        <label class="d-block" for="">Texte</label>
-                        <textarea name="" id="" class="col-10 mb-3" placeholder="Pain, Vin, ..."></textarea>
+                        <label class="d-block fs-4" for="commentaires">Texte</label>
+                        <textarea name="commentaires" rows="4" id="commentaires" class="col-10 mt-1 mb-4"
+                            placeholder="Pain, Vin, ..."></textarea>
 
-                        <button id="resetButton" type="button" class="btn btn-outline-light col-4 m-1">Annuler</button>
+                        <button id="resetButton" type="button" class="btn btn-outline-light col-4 m-1"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Annuler</button>
                         <button id="saveButton" type="button" class="btn btn-light col-4 m-1" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasDarkNavbar">Enregistrer</button>
 
@@ -57,122 +58,16 @@
 
         <div id="board" class="row row-cols-1 row-cols-lg-4 justify-content-evenly">
 
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
+            <!-- Post It Type -->
+            <!-- <div
+                class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
+                <div class="text-center">
                     <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
+                    <i class="bi bi-x-lg float-end" onclick="supprimer(this)"></i>
                 </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
-
-            <div class="col p-2 m-3 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
-                <div class="text-center border">
-                    <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
-                    <i class="bi bi-x-lg float-end" onclick="delete(this)"></i>
-                </div>
-                <p class="h4">azeaze</p>
-                <p>aeazeaze azeaze azeaze azeaze aze aze qsdqsd qsdqqsd qsdqsd qsdqsd qqsdqsdqsd qsd qsd qsd </p>
-            </div>
+                <p class="h4"></p>
+                <p></p>
+            </div> -->
 
         </div>
 
