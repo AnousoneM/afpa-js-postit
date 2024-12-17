@@ -33,19 +33,19 @@
                 <div class="offcanvas-body">
 
                     <div class="row px-3 justify-content-center">
+                        <form action="#" id="postItForm">
+                            <label class="d-block fs-4" for="titre">Titre</label>
+                            <input type="text" class="col-10 mt-1 mb-3" placeholder="Courses" name="titre" id="titre">
 
-                        <label class="d-block fs-4" for="titre">Titre</label>
-                        <input type="text" class="col-10 mt-1 mb-3" placeholder="Courses" name="titre" id="titre">
+                            <label class="d-block fs-4" for="commentaires">Texte</label>
+                            <textarea name="commentaires" rows="4" id="commentaires" class="col-10 mt-1 mb-4"
+                                placeholder="Pain, Vin, ..."></textarea>
 
-                        <label class="d-block fs-4" for="commentaires">Texte</label>
-                        <textarea name="commentaires" rows="4" id="commentaires" class="col-10 mt-1 mb-4"
-                            placeholder="Pain, Vin, ..."></textarea>
-
-                        <button id="resetButton" type="button" class="btn btn-outline-light col-4 m-1"
-                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Annuler</button>
-                        <button id="saveButton" type="button" class="btn btn-light col-4 m-1" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasDarkNavbar">Enregistrer</button>
-
+                            <button id="resetButton" type="button" class="btn btn-outline-light col-4 m-1"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Annuler</button>
+                            <button id="saveButton" type="button" class="btn btn-light col-4 m-1"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Enregistrer</button>
+                        </form>
                     </div>
 
                 </div>

@@ -1,21 +1,26 @@
-// ajoput d'un écouteur d'événement sur le bouton "saveButton"
+// ajout d'un écouteur d'événement sur le bouton "saveButton"
 document.querySelector('#saveButton').addEventListener('click', function () {
 
     // récupération des valeurs des inputs
     let titre = document.querySelector('#titre').value;
     let commentaires = document.querySelector('#commentaires').value;
 
-    // nous testons si les champs sont vides
+    // nous testons si les champs sont vides et affichons un message d'alerte si c'est le cas
     if (titre === '' || commentaires === '') {
         alert('Veuillez remplir tous les champs');
         return; // on sort de la fonction avec return
     } else {
         // appel de la fonction permettant d'ajouter un post it
         addPostIt(titre, commentaires);
-
         // appel de la fonction permettant de vider les champs
         effacer();
     }
+});
+
+// ajout d'un écouteur d'événement sur le bouton "resetButton"
+document.querySelector('#resetButton').addEventListener('click', function () {
+    // appel de la fonction permettant de vider les champs
+    effacer();
 });
 
 // fonction permettant de supprimer le post it : nous recupérerons l'élément cliqué
