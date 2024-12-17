@@ -5,12 +5,17 @@ document.querySelector('#saveButton').addEventListener('click', function () {
     let titre = document.querySelector('#titre').value;
     let commentaires = document.querySelector('#commentaires').value;
 
-    // appel de la fonction permettant d'ajouter un post it
-    addPostIt(titre, commentaires);
+    // nous testons si les champs sont vides
+    if (titre === '' || commentaires === '') {
+        alert('Veuillez remplir tous les champs');
+        return; // on sort de la fonction avec return
+    } else {
+        // appel de la fonction permettant d'ajouter un post it
+        addPostIt(titre, commentaires);
 
-    // appel de la fonction permettant de vider les champs
-    effacer();
-    
+        // appel de la fonction permettant de vider les champs
+        effacer();
+    }
 });
 
 // fonction permettant de supprimer le post it : nous recupérerons l'élément cliqué
@@ -20,7 +25,7 @@ function supprimer(element) {
 }
 
 // fonction permettant de vider les champs titre et commentaires
-function effacer()  {
+function effacer() {
     document.querySelector('#titre').value = '';
     document.querySelector('#commentaires').value = '';
 }
