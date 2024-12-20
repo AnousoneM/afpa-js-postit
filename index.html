@@ -35,16 +35,19 @@
                     <div class="row px-3 justify-content-center">
                         <form action="#" id="postItForm">
                             <label class="d-block fs-4" for="titre">Titre</label>
-                            <input type="text" class="col-10 mt-1 mb-3" placeholder="Courses" name="titre" id="titre">
+                            <input type="text" class="col-12 mt-1 mb-3" placeholder="Courses" name="titre" id="titre">
 
                             <label class="d-block fs-4" for="commentaires">Texte</label>
-                            <textarea name="commentaires" rows="4" id="commentaires" class="col-10 mt-1 mb-4"
+                            <textarea name="commentaires" rows="4" id="commentaires" class="col-12 mt-1 mb-4"
                                 placeholder="Pain, Vin, ..."></textarea>
-
-                            <button id="resetButton" type="button" class="btn btn-outline-light col-4 m-1"
-                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Annuler</button>
-                            <button id="saveButton" type="button" class="btn btn-light col-4 m-1"
-                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar">Enregistrer</button>
+                            <div class="text-center">
+                                <button id="resetButton" type="button"
+                                    class="btn btn-outline-light col-4 m-1" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasDarkNavbar">Annuler</button>
+                                <button id="saveButton" type="button" class="btn btn-light col-4 m-1"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasDarkNavbar">Enregistrer</button>
+                            </div>
                         </form>
                     </div>
 
@@ -63,13 +66,13 @@
                 <div
                     class="p-2 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
                     <div class="text-center">
-                        <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
+                        <i class="pin position-relative bi bi-pin-angle-fill text-danger fs-3"></i>
                         <i class="bi bi-x-lg float-end" onclick="supprimer(this)"></i>
                     </div>
-                    <p class="h4"></p>
-                    <p></p>
+                    <p class="h4">Courses</p>
+                    <p>Pain, Fromage</p>
                 </div>
-            </div> -->
+            </div>           -->
 
         </div>
 

@@ -41,7 +41,7 @@ function addPostIt(titre, commentaires) {
     <div class="col">
         <div class="p-2 text-center border border-secondary-subtle border-start-0 border-top-0 bg-warning-subtle shadow">
             <div class="text-center">
-                <i class="bi bi-pin-angle-fill text-danger-subtle fs-3"></i>
+                <i class="pin position-relative bi bi-pin-angle-fill text-danger fs-3"></i>
                 <i class="bi bi-x-lg float-end" onclick="supprimer(this)"></i>
             </div>
             <p class="h4">${titre}</p>
