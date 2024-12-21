@@ -1,5 +1,6 @@
-// Déclaration globale d'un tableau qui contiendra tous les postit créer
+// Déclaration globale d'un tableau qui contiendra tous les postits créés
 const allPostIt = []
+// Déclaration globale d'un compteur de postIt
 let postItNb = 0
 
 // ajout d'un écouteur d'événement sur le bouton "saveButton"
@@ -37,7 +38,7 @@ document.querySelector('#saveButton').addEventListener('click', function () {
 
 // ajout d'un écouteur d'événement sur le bouton "resetButton"
 document.querySelector('#resetButton').addEventListener('click', function () {
-    // appel de la fonction permettant de vider les champs
+    // appel de la fonction permettant de vider les champs via erase()
     erase();
 });
 
