@@ -16,14 +16,14 @@ document.querySelector('#saveButton').addEventListener('click', function () {
 
     // nous testons si les champs sont vides et affichons un message d'alerte si c'est le cas
     if (title === '' || description === '') {
-        alert('Veuillez remplir tous les champs');
+        alert('Veuillez remplir tous les champs')
         return; // on sort de la fonction avec return
     } else {
         // nous incrémentons la valeur de postItNb
         postItNb++
 
         // appel de la fonction permettant d'ajouter un post it : le numéro du post it, le titre et la description
-        addPostIt(postItNb, title, description);
+        addPostIt(postItNb, title, description)
 
         // Nous allons créer un objet pour le stocker dans un notre tableau
         const postIt = {
@@ -49,7 +49,7 @@ document.querySelector('#resetButton').addEventListener('click', function () {
     resetInput();
 });
 
-// fonction permettant de supprimer le post it : nous recupérerons l'élément cliqué
+// fonction permettant de supprimer le post it : nous recupérerons l'élément cliqué en paramètre via this
 function deletePostIt(element) {
 
     // nous récupérons le numéro du post it à supprimer à l'aide de dataset.postitNb
@@ -68,13 +68,13 @@ function deletePostIt(element) {
     localStorage.setItem('myPostIt', JSON.stringify(allPostIt))
 
     // nous remontons dans l'arborescence pour cacher le parent du parent du parent de l'élément cliqué : ça cache le post it complet pour conservé une place vide
-    element.parentElement.parentElement.parentElement.style.visibility = 'hidden';
+    element.parentElement.parentElement.parentElement.style.visibility = 'hidden'
 }
 
 // fonction permettant de vider les champs titre et commentaires
 function resetInput() {
-    document.querySelector('#title').value = '';
-    document.querySelector('#description').value = '';
+    document.querySelector('#title').value = ''
+    document.querySelector('#description').value = ''
 }
 
 // fonction permettant d'ajouter un post it avec les valeurs des inputs "titre et commentaires" recupérées
